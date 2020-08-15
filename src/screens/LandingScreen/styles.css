@@ -1,0 +1,463 @@
+/* .preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.spinnerCust {
+    border-color: #ff971d;
+} */
+
+nav {
+    background-color: transparent !important;   
+    position: fixed; 
+    top: 0px;
+    z-index: 10;
+}
+
+.brand-logo {
+    font-weight: bolder;
+    color: #ff971d !important;
+    margin-left: 6vw;
+}
+
+.navItem {
+    font-size: 18px !important;
+    font-weight: 600;
+    text-decoration: none;
+    margin: auto 2px;
+    color: #ff971d;
+}
+
+.navItem:hover{
+    text-decoration: none !important;
+    color: 'black';
+}
+
+.correctRight {
+    margin-right: 6vw;
+}
+
+.landingDiv {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.landingLogoContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.imageLogo {
+    margin: auto;
+    width: 32%;
+}
+
+.landingContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.landingP {
+    margin: auto;
+    text-align: center;
+}
+
+.landingDoer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: -30px;
+}
+
+.locationImg {
+    height: 2.4em;
+    width: auto;
+    margin: auto;
+}
+
+.landingP p {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    background-color: #f9f6f7;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: black;
+    padding: 4% 0px;
+}
+
+.textDiv {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+    padding: 10px 6%;
+}
+
+.textDiv h3 {
+    padding: 0px 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+    width: max-content;
+    color: #ff971d;
+}
+
+.textDiv p {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0px;
+    margin-top: 1%;
+    font-size: 120%;
+    font-weight: 400;
+}
+
+.imageDiv {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.aboutImage {
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 60%;
+}
+
+.showcaseContainer {
+    width: 100vw;
+    height: auto;
+    scroll-snap-align: start;
+
+    background-color: #ffe8d6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: #ff971d;
+    text-align: center;
+    padding: 4% 100px;
+}
+
+.showcaseTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.showcaseTitle h3 {
+    padding: 0px 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+    width: max-content;
+
+}
+
+.showcaseBox {    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 4%;
+}
+
+.showcaseImage {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 200px;
+
+    background-color: white;
+    border-radius: 50%;
+    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.showcaseImage:hover {
+    box-shadow: 0 4px 50px 0 rgba(255,151,29, 0.2), 0 6px 20px 0 rgba(255,151,29, 0.19);
+}
+
+.aboutUs {
+    width: 100vw;
+    min-height: 100vh;
+    scroll-snap-align: start;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: #220035;
+    padding: 0px;
+}
+
+.contactFollowWrapper {
+    height: auto;
+    scroll-snap-align: start;
+}
+
+.contactUs {
+    width: 100vw;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: #220035;
+    text-align: center;
+    padding: 4% 100px;
+}
+
+.contactTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.contactTitle h3 {
+    padding: 0px 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #ff971d;
+    width: max-content;
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 0%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .brand-logo {
+        font-weight: bolder;
+        color: #ff971d !important;
+        margin: auto;
+        left: auto !important;
+        right: 5vw;
+        text-align: center;
+        transform: none !important;
+
+        position: absolute;
+    }
+
+    .sidenav {
+        background-color: #ff971d;
+        padding-top: 60px;
+    }
+
+    .navItem {
+        height: 40px !important;
+        line-height: 34px !important;
+        font-size: 16px !important;
+        font-weight: 600;
+        text-decoration: none;
+        margin: auto 10px;
+        color: white !important;
+    }
+
+    .landingDiv {    
+        flex-direction: column;
+    }
+
+    .landingLogoContainer {
+        width: 98vw;
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 16vh;
+    }
+
+    .landingContent {
+        width: 98vw;
+        margin: auto;
+        margin-top: 20vh;
+    }
+
+    .imageLogo {
+        width: 98vw !important;
+        text-align: center;
+        margin-top: 20vh;
+        margin-bottom: 15px;
+        font-size: 3.0rem;
+    }
+
+    .landingP {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .landingP h4 {
+        font-size: 1.8rem;
+    }
+
+    .landingP p {
+        padding: 0px;
+        margin: 10px 0px;
+        line-height: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .aboutImage {
+        width: 80%;
+    }
+
+    .textDiv {
+        width: 98vw;
+        height: max-content;
+    }
+
+    .textDiv h3 {
+        font-size: 1.6rem;
+    }
+
+    .textDiv p {
+        font-size: 1.1rem;
+    }
+
+    .imageDiv {
+        width: 98vw;
+        padding-top: 40px;
+    }
+
+    .showcaseContainer {
+        height: auto;
+        padding: 0px;
+        text-align: left;
+        padding: 40px 0px;
+    }
+
+    .showcaseTitle {
+        padding: 20px 6%;
+        align-self: flex-start;
+    }
+
+    .showcaseTitle h3 {
+        font-size: 1.6rem;
+    }
+
+    .showcaseBox {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .ornamentsBox a {
+        align-self: center;
+        margin: 20px auto;
+    }
+
+    .showcaseImage {
+        width: 60%;
+        margin: 10px auto;
+    }
+
+    .aboutUs {
+        height: auto;
+        flex-direction: column;
+        height: max-content;
+        padding-bottom: 40px;
+    }
+
+    .contactFollowWrapper {
+        height: auto;
+    }
+
+    .contactUs {
+        padding: 0px;
+        text-align: left;
+    }
+
+    .contactTitle {
+        padding: 10px 6%;
+        align-self: center;
+    }
+
+    .contactTitle h3 {
+        color: #ff971d;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .contactBox {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 0px 6%;
+        margin-bottom: 40px;
+    }
+
+    .contactBox p {
+        margin: 0px;
+        padding: 6px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .contactBox a {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,19 @@
+.button {
+    display: block;
+    text-shadow: none;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ff971d;   
+    background-color: #ffe8d6;
+    border: 2px solid #ff971d;
+    padding: 1.4vh 4vh;
+    position: relative;
+    top: 22px;
+    transition: 0.35s;
+    align-self: flex-start;
+}
+
+.button:hover {
+    background-color: #ff971d;
+    color: white;
+}

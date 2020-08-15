@@ -1,0 +1,32 @@
+.downArrow {
+    display: block;
+    position: absolute;
+    width: 2.5%;
+    -webkit-animation-name: down; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes down {
+    0%   {top: 87vh;}
+    50%  {top: 93vh;}
+    100% {top: 87vh;}
+}
+/* for normal browsers */
+@keyframes down {
+    0%   {top: 87vh;}
+    50%  {top: 93vh;}
+    100% {top: 87vh;}
+}
+
+@media only screen and (max-width: 600px) {
+    .downArrow {
+        justify-self: center;
+        align-self: center;
+        width: 8%;
+    }
+}
