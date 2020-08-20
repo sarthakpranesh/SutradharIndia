@@ -289,8 +289,9 @@ nav {
     }
 
     .sectionImage {
-        width: 98vw;
+        width: 100vw;
         padding-top: 40px;
+        justify-content: center;
     }
 
     .sectionImage img {
