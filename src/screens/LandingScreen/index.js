@@ -4,6 +4,10 @@ import React, { useEffect } from 'react';
 // importing components
 import DownArrow from '../../components/DownArrow/index.js';
 import Button from '../../components/Button/index.js';
+import FacebookIcon from '../../components/Svgs/facebook/index.js';
+import InstagramIcon from '../../components/Svgs/Instagram/index.js';
+import TwitterIcon from '../../components/Svgs/Twitter/index.js';
+import GithubIcon from '../../components/Svgs/Github/index.js';
 
 // importing styles
 import "./styles.css";
@@ -31,69 +35,86 @@ const LandingScreen = () => {
         {/* Navbar section */}
         <nav class="changeColorOnScroll">
             <div class="nav-wrapper">
-                <a href="#landingDiv" class="brand-logo">
-                    SutradharIndia
+                <a href="#landingSection" class="brand-logo" id="brandLogo">
+                    Sutradhar India
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style={{color: "#ff971d"}}>menu</i></a>
                 <ul class="right hide-on-med-and-down correctRight">
-                    <li><a href="#about" class="navItem">Our Work</a></li>
+                    <li><a href="#about" class="navItem">Our Goal</a></li>
+                    <li><a href="#Products" class="navItem">Products</a></li>
                     <li><a href="#Ornaments" class="navItem">Ornaments</a></li>
                     <li><a href="#Containers" class="navItem">Containers</a></li>
                     <li><a href="#Furniture" class="navItem">Furniture</a></li>
-                    <li><a href="#aboutUs" class="navItem">About Us</a></li>
+                    <li><a href="#Partners" class="navItem">Partners</a></li>
                     <li><a href="#contactUs" class="navItem">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#about" class="sidenav-close navItem">Our Work</a></li>
+            <li><a href="#Products" class="sidenav-close navItem">Products</a></li>
             <li><a href="#Ornaments" class="sidenav-close navItem">Ornaments</a></li>
             <li><a href="#Containers" class="sidenav-close navItem">Containers</a></li>
             <li><a href="#Furniture" class="sidenav-close navItem">Furniture</a></li>
-            <li><a href="#aboutUs" class="sidenav-close navItem">About Us</a></li>
+            <li><a href="#Partners" class="sidenav-close navItem">Partners</a></li>
             <li><a href="#contactUs" class="sidenav-close navItem">Contact Us</a></li>
         </ul>
 
         {/* landing section */}
-        <div class="landingDiv" id="landingDiv">
-            <div class="landingLogoContainer">
-                <h1 class="imageLogo" style={{fontWeight: "bolder"}} >SutradharIndia</h1>
+        <div class="sectionContainer" id="landingSection">
+            <div class="sectionImage" id="landingLogo">
+                <h1>Sutradhar India</h1>
             </div>
             <div class="landingContent">
                 <div class="landingP">
                     <span class="landingDoer">
                         <img class="locationImg" src={MapLogo} alt="Location Icon" />
-                        <h4 style={{padding: 0, marginTop: 10}}>The Handy Craft Center</h4>
+                        <h4 className="landingSubHeading">Handicraft Centre of Rural &amp; Tribal Artisans</h4>
                         <p>
-                            Shakarpur, New Delhi
+                        210 Rohini Complex,
                             <br/>
-                            India. Pin code - 110092
+                        WA-121, Shakarpur, New Delhi-110092
                         </p>
                     </span>
                 </div>
-                <DownArrow navigateTo="#about" />
             </div>
-            
+            <DownArrow navigateTo="#about" />
         </div>
 
         {/* about section */}
-        <div class="about" id="about">
-            <div class="textDiv">
-                <h3>What We Create</h3>
+        <div class="sectionContainer" id="about">
+            <div class="sectionContent">
+                <h3>Empowering Craftsmen and Changing Lives</h3>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                proident, sunt in culpa qui officia deserunt mollit anim id est 
-                laborum.
+                Sutradhar India is a social enterprise to help rural and tribal artisans of India to preserve
+                their rich art &amp; craft, and provide them a sustainable livelihood. It is a collective effort of
+                artisans, designers and social activists to promote and revive the fast extinguishing art &amp;
+                craft of rural India. We also conduct training workshops for artisans from time to time to
+                improve their skills in new designs as per the new emerging market demands. The income
+                earned through this enterprise goes into improving the living standard and welfare of
+                artisans and their families.
                 </p>
                 <Button text="Download Brochure" />
             </div>
-            <div class="imageDiv">
+            <div class="sectionImage">
                 <img class="aboutImage" src={v1} alt="Sutradhar India" />
+            </div>
+        </div>
+
+        {/* Our Products */}
+        <div class="sectionContainer" id="Products">
+            <div class="sectionImage">
+                <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />
+            </div>
+            <div class="sectionContent">
+                <h3>Our Products</h3>
+                <p>
+                We manufacture, supply and export handicraft made in natural grass, paper, fabric and
+                wood available in various intricate designs, unique patterns and beautiful colour
+                combinations. Our products include Dolls, Jewellery, handbags, wall hangings, coasters,
+                baskets, caps, furniture and other house decorating objects. All our products are nature
+                friendly and manufactured without using any hazardous chemicals.
+                </p>
             </div>
         </div>
 
@@ -145,44 +166,32 @@ const LandingScreen = () => {
         </div>
 
         {/* about us section */}
-        <div class="aboutUs" id="aboutUs">
-            <div class="imageDiv">
-                <img class="aboutImage" src={require('../../assets/v2.jpg')} alt="Sutradhar India" />
+        <div class="sectionContainer" id="Partners">
+            <div class="sectionImage">
+                <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />
             </div>
-            <div class="textDiv">
-                <h3>About Us</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                    proident, sunt in culpa qui officia deserunt mollit anim id est 
-                    laborum.
-                </p>
+            <div class="sectionContent">
                 <h3>Our Partners</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                    proident, sunt in culpa qui officia deserunt mollit anim id est 
-                    laborum.
+                Our partners include retail and wholesale domestic &amp; foreign buyers, interior designers,
+                corporate houses and government agencies. We take upmost care of quality control and
+                timely delivery of consignments. We also get support from various national and
+                international agencies engaged in development and welfare activities.
                 </p>
             </div>
         </div>
 
-        <div class="contactFollowWrapper">
-            <div class="contactUs" id="contactUs">
-                <div class="contactTitle">
-                    <h3>Contact SutradharIndia</h3>
-                </div>
-                <div class="contactBox">
-                    <p><a href="#">xyz@gmail.com</a></p>
-                    <p><a href="#">9999999999</a></p>
+        <div class="sectionContainer" id="contactUs">
+            <div class="sectionContent">
+                <h3>Contact Us</h3>
+                <p>Director Ramesh Pranesh</p>
+                <p>Email: <a href="mailto:sutradharindiatrust@gmail.com">sutradharindiatrust@gmail.com</a></p>
+                <p>Mobile: <a href="tel:9810709170">9810709170</a></p>
+                <div id="contactUsSocial">
+                    <a href=""><FacebookIcon /></a>
+                    <a><InstagramIcon /></a>
+                    <a><TwitterIcon /></a>
+                    <a><GithubIcon /></a>
                 </div>
             </div>
         </div>

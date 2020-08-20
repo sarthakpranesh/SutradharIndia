@@ -1,20 +1,3 @@
-/* .preloader-background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFFFFF;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.spinnerCust {
-    border-color: #ff971d;
-} */
-
 nav {
     background-color: transparent !important;   
     position: fixed; 
@@ -22,7 +5,7 @@ nav {
     z-index: 10;
 }
 
-.brand-logo {
+#brandLogo {
     font-weight: bolder;
     color: #ff971d !important;
     margin-left: 6vw;
@@ -42,21 +25,72 @@ nav {
 }
 
 .correctRight {
-    margin-right: 6vw;
+    margin-right: 3vw;
 }
 
-.landingDiv {
-    height: 100vh;
+.sectionContainer {
     width: 100vw;
+    height: 100vh;
     scroll-snap-align: start;
+
+    background-color: #f9f6f7;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    color: black;
+    padding: 4% 0px;
 }
 
-.landingLogoContainer {
+.sectionContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+    padding: 10px 6%;
+}
+
+.sectionContent h3 {
+    padding: 0px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+    color: #ff971d;
+    text-align: left;
+}
+
+.sectionContent p {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0px;
+    margin-top: 1%;
+    font-size: 140%;
+    font-weight: 600;
+}
+
+.sectionImage {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.sectionImage img {
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 60%;
+}
+
+#landingSection {
+    background-color: #ffffff;
+}
+
+#landingLogo {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -64,9 +98,11 @@ nav {
     align-content: center;
 }
 
-.imageLogo {
+#landingLogo h1 {
     margin: auto;
-    width: 32%;
+    font-size: 64px;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .landingContent {
@@ -75,11 +111,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    text-align: center;
-}
-
-.landingP {
-    margin: auto;
     text-align: center;
 }
 
@@ -97,6 +128,13 @@ nav {
     margin: auto;
 }
 
+.landingSubHeading {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 .landingP p {
     margin: 0px;
     padding: 0px;
@@ -104,64 +142,6 @@ nav {
     font-family: 'DM Sans', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
-}
-
-.about {
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-
-    background-color: #f9f6f7;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    color: black;
-    padding: 4% 0px;
-}
-
-.textDiv {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: justify;
-    padding: 10px 6%;
-}
-
-.textDiv h3 {
-    padding: 0px 4px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 200%;
-    width: max-content;
-    color: #ff971d;
-}
-
-.textDiv p {
-    font-family: 'DM Sans', sans-serif;
-    margin: 0px;
-    margin-top: 1%;
-    font-size: 120%;
-    font-weight: 400;
-}
-
-.imageDiv {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-.aboutImage {
-    border: none;
-    border-radius: 5px;
-    margin: auto;
-    width: 60%;
 }
 
 .showcaseContainer {
@@ -226,68 +206,42 @@ nav {
     box-shadow: 0 4px 50px 0 rgba(255,151,29, 0.2), 0 6px 20px 0 rgba(255,151,29, 0.19);
 }
 
-.aboutUs {
-    width: 100vw;
-    min-height: 100vh;
-    scroll-snap-align: start;
-
-    background-color: white;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    color: #220035;
-    padding: 0px;
-}
-
-.contactFollowWrapper {
+#contactUs {
     height: auto;
-    scroll-snap-align: start;
+    background-color: #ff971d;
+    justify-content: flex-start;
 }
 
-.contactUs {
-    width: 100vw;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    color: #220035;
-    text-align: center;
-    padding: 4% 100px;
+#contactUs h3 {
+    color: black;
+    font-weight: bolder;
 }
 
-.contactTitle {
+#contactUs p {
+    font-weight: 500;
+}
+
+#contactUs p a{
+    color: black;
+    text-decoration: underline;
+}
+
+#contactUsSocial {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -15px;
 }
 
-.contactTitle h3 {
-    padding: 0px 4px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    color: #ff971d;
-    width: max-content;
-}
-
-.contactBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    margin-top: 0%;
+#contactUsSocial a {
+    margin: auto 10px;
 }
 
 @media only screen and (max-width: 600px) {
 
-    .brand-logo {
+    #brandLogo {
         font-weight: bolder;
         color: #ff971d !important;
         margin: auto;
@@ -297,6 +251,7 @@ nav {
         transform: none !important;
 
         position: absolute;
+        font-size: 1.6em;
     }
 
     .sidenav {
@@ -314,29 +269,52 @@ nav {
         color: white !important;
     }
 
-    .landingDiv {    
-        flex-direction: column;
+    .sectionContainer {
+        flex-direction: column-reverse;
+        height: auto;
+        padding-bottom: 40px;
     }
 
-    .landingLogoContainer {
+    .sectionContent {
+        width: 98vw;
+        height: max-content;
+    }
+
+    .sectionContent h3 {
+        font-size: 1.6rem;
+    }
+
+    .sectionContent p {
+        font-size: 1.1rem;
+    }
+
+    .sectionImage {
+        width: 98vw;
+        padding-top: 40px;
+    }
+
+    .sectionImage img {
+        width: 80%;
+    }
+
+    #landingSection {    
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #landingLogo {
         width: 98vw;
         margin: auto;
-        margin-bottom: 0px;
-        margin-top: 16vh;
+    }
+
+    #landingLogo h1 {
+        font-size: 2.8rem;
     }
 
     .landingContent {
         width: 98vw;
         margin: auto;
-        margin-top: 20vh;
-    }
-
-    .imageLogo {
-        width: 98vw !important;
-        text-align: center;
-        margin-top: 20vh;
-        margin-bottom: 15px;
-        font-size: 3.0rem;
+        margin-top: 0vh;
     }
 
     .landingP {
@@ -344,43 +322,19 @@ nav {
         margin-top: 0px;
     }
 
-    .landingP h4 {
-        font-size: 1.8rem;
+    .landingSubHeading {
+        font-size: 1.2rem;
     }
 
     .landingP p {
         padding: 0px;
-        margin: 10px 0px;
+        margin: 0px;
         line-height: 1.4rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
-    .about {
-        flex-direction: column-reverse;
-        height: auto;
-        padding-bottom: 40px;
-    }
-
-    .aboutImage {
-        width: 80%;
-    }
-
-    .textDiv {
-        width: 98vw;
-        height: max-content;
-    }
-
-    .textDiv h3 {
-        font-size: 1.6rem;
-    }
-
-    .textDiv p {
-        font-size: 1.1rem;
-    }
-
-    .imageDiv {
-        width: 98vw;
-        padding-top: 40px;
+    #Products {
+        flex-direction: column;
     }
 
     .showcaseContainer {
@@ -392,11 +346,11 @@ nav {
 
     .showcaseTitle {
         padding: 20px 6%;
-        align-self: flex-start;
     }
 
     .showcaseTitle h3 {
         font-size: 1.6rem;
+        text-align: center;
     }
 
     .showcaseBox {
@@ -413,51 +367,5 @@ nav {
     .showcaseImage {
         width: 60%;
         margin: 10px auto;
-    }
-
-    .aboutUs {
-        height: auto;
-        flex-direction: column;
-        height: max-content;
-        padding-bottom: 40px;
-    }
-
-    .contactFollowWrapper {
-        height: auto;
-    }
-
-    .contactUs {
-        padding: 0px;
-        text-align: left;
-    }
-
-    .contactTitle {
-        padding: 10px 6%;
-        align-self: center;
-    }
-
-    .contactTitle h3 {
-        color: #ff971d;
-        font-size: 1.6rem;
-        text-align: center;
-    }
-
-    .contactBox {
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        padding: 0px 6%;
-        margin-bottom: 40px;
-    }
-
-    .contactBox p {
-        margin: 0px;
-        padding: 6px;
-        font-size: 16px;
-        text-align: center;
-    }
-    
-    .contactBox a {
-        font-size: 16px;
     }
 }
