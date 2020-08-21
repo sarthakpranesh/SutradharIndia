@@ -94,7 +94,7 @@ const LandingScreen = () => {
                 earned through this enterprise goes into improving the living standard and welfare of
                 artisans and their families.
                 </p>
-                <Button text="Download Brochure" />
+                {/* <Button text="Download Brochure" /> */}
             </div>
             <div class="sectionImage">
                 <img class="aboutImage" src={v1} alt="Sutradhar India" />
