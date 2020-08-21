@@ -187,12 +187,12 @@ const LandingScreen = () => {
                 <p>Director Ramesh Pranesh</p>
                 <p>Email: <a href="mailto:sutradharindiatrust@gmail.com">sutradharindiatrust@gmail.com</a></p>
                 <p>Mobile: <a href="tel:9810709170">9810709170</a></p>
-                <div id="contactUsSocial">
+                {/* <div id="contactUsSocial">
                     <a href=""><FacebookIcon /></a>
                     <a><InstagramIcon /></a>
                     <a><TwitterIcon /></a>
                     <a><GithubIcon /></a>
-                </div>
+                </div> */}
             </div>
         </div>
         </>
