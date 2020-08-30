@@ -3,11 +3,11 @@ import React, { useEffect } from 'react';
 
 // importing components
 import DownArrow from '../../components/DownArrow/index.js';
-import Button from '../../components/Button/index.js';
-import FacebookIcon from '../../components/Svgs/facebook/index.js';
-import InstagramIcon from '../../components/Svgs/Instagram/index.js';
-import TwitterIcon from '../../components/Svgs/Twitter/index.js';
-import GithubIcon from '../../components/Svgs/Github/index.js';
+import Button from '../../components/Button/Button.js';
+// import FacebookIcon from '../../components/Svgs/facebook/index.js';
+// import InstagramIcon from '../../components/Svgs/Instagram/index.js';
+// import TwitterIcon from '../../components/Svgs/Twitter/index.js';
+// import GithubIcon from '../../components/Svgs/Github/index.js';
 
 // importing styles
 import "./styles.css";
@@ -94,7 +94,7 @@ const LandingScreen = () => {
                 earned through this enterprise goes into improving the living standard and welfare of
                 artisans and their families.
                 </p>
-                {/* <Button text="Download Brochure" /> */}
+                <Button>Download Brochure</Button> 
             </div>
             <div class="sectionImage">
                 <img class="aboutImage" src={v1} alt="Sutradhar India" />
