@@ -5,10 +5,7 @@ import React, { useEffect } from 'react';
 import SectionContainer from '../../components/SectionContainer/SectionContainer.js';
 import DownArrow from '../../components/DownArrow/index.js';
 import Button from '../../components/Button/Button.js';
-// import FacebookIcon from '../../components/Svgs/facebook/index.js';
-// import InstagramIcon from '../../components/Svgs/Instagram/index.js';
-// import TwitterIcon from '../../components/Svgs/Twitter/index.js';
-// import GithubIcon from '../../components/Svgs/Github/index.js';
+import Footer from '../../components/Footer/Footer.js';
 
 // importing styles
 import "./styles.css";
@@ -200,25 +197,7 @@ const LandingScreen = () => {
         >
         </SectionContainer>
 
-        <SectionContainer
-            id="contactUs"
-            leftClassName=""
-            leftContent={() => (
-                <div class="sectionContent">
-                    <h3>Contact Us</h3>
-                    <p>Director Ramesh Pranesh</p>
-                    <p>Email: <a href="mailto:sutradharindiatrust@gmail.com">sutradharindiatrust@gmail.com</a></p>
-                    <p>Mobile: <a href="tel:9810709170">9810709170</a></p>
-                    {/* <div id="contactUsSocial">
-                        <a href=""><FacebookIcon /></a>
-                        <a><InstagramIcon /></a>
-                        <a><TwitterIcon /></a>
-                        <a><GithubIcon /></a>
-                    </div> */}
-                </div>
-            )}
-        >
-        </SectionContainer>
+        <Footer />
         </>
     );
 }

@@ -1,0 +1,27 @@
+.FooterWrapper h3 {
+    padding: 0px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+    color: #ff971d;
+    text-align: left;
+}
+
+.FooterWrapper p {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0px;
+    margin-top: 1%;
+    margin-bottom: 20px;
+    font-size: 140%;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .FooterWrapper h3 {
+        font-size: 1.6rem;
+    }
+
+    .FooterWrapper p {
+        font-size: 1.1rem;
+    }
+}

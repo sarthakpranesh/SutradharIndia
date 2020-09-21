@@ -1,0 +1,56 @@
+.topShopRoller {
+    padding: 20px 20px;
+    background-color: #ff971d !important;
+}
+.topShopRollerFixedHeader {
+    position: absolute;
+    top: 10vh;
+    font-size: 64px;
+    font-weight: bolder;
+}
+.topShopRoller img {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    border-radius: 8px;
+}
+.topShopRollerInnerDiv{
+    margin-left: 80px;
+    align-self: flex-end;
+}
+
+.productDisplayContainer {
+    width: 100vw;
+    height: auto;
+
+    background-color: #ffe8d6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    color: #ff971d;
+    text-align: center;
+    padding: 4% 100px;
+    padding-bottom: 10%;
+}
+
+.productDisplayTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.productDisplayShowcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-top: 4%;
+    flex-wrap: wrap;
+}
+
+.productDisplayShowcase div {
+    margin-top: 40px;
+}
