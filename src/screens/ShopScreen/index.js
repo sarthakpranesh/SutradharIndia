@@ -12,6 +12,7 @@ import "./styles.css";
 
 const ShopScreen = () => {
   const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     firebase.firestore().collection("products").get()
@@ -27,6 +28,57 @@ const ShopScreen = () => {
       })
   }, [])
   console.log(products)
+
+  if (selectedProduct !== null) {
+    return (
+      <SectionContainer
+        className="topShopRoller"
+        leftClassName=""
+        leftContent={() => <img src={selectedProduct.img} alt="Product" />}
+        rightClassName=""
+        rightContent={() => (
+          <div>
+            <div className="topShopRollerInnerDiv">
+              <h3>{selectedProduct.name}</h3>
+              <p>
+                {selectedProduct.desc != null ? selectedProduct.desc : "No Description Provided!"}
+              </p>
+              <br />
+              {
+                selectedProduct.features != null
+                ?
+                (
+                  <>
+                    <h6>Key Features</h6>
+                    <ol>
+                      {selectedProduct.features.map((f) => <li>{f}</li>)}
+                    </ol>
+                  </>
+                ) : 
+                null
+              }
+              <br />
+              <Button href={`http://${selectedProduct.link}`}>BUY NOW</Button>
+            </div>
+          </div>
+        )}
+      >
+        <button onClick={() => setSelectedProduct(null)} style={{
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          width: "40px",
+          height: "40px",
+          textAlign: "center",
+          padding: "0px",
+          borderRadius: "50%",
+        }}>
+          x
+        </button>
+      </SectionContainer>
+    );
+  }
+
   return (
     <>
     <SectionContainer
@@ -49,24 +101,38 @@ const ShopScreen = () => {
       )}
       rightContent={() => <img src={require("../../assets/Handicraft/Seasonal Grass/grass-tray.jpg")} alt="Product" />}
     >
+      <button onClick={() => window.location.href = "/"} style={{
+        position: "absolute",
+        top: "20px",
+        left: "40px",
+        border: "none",
+        textAlign: "center",
+        padding: "0px",
+        backgroundColor: "transparent",
+        cursor: "pointer"
+      }}>
+        <h5>Sutradhar India</h5>
+      </button>
     </SectionContainer>
 
     {
       products.length !== 0 ? (
-        products.map((type) => {
+        products.reverse().map((type) => {
           return (
             <div class="productDisplayContainer" id="Containers" >
               <div class="productDisplayTitle">
-                  <h3>Few Grass Containers</h3>
+                  <h3>{type.name}</h3>
               </div>
               <div class="productDisplayShowcase">
                 {
                   type.items.map((item, index) => {
                     return (
-                      <div key={`${index}`}>
-                        <img class="showcaseImage" src={item.img} alt="Sutradhar India Grass Utils" />
-                        <h5>{item.name}</h5>
-                      </div>
+                      <button style={{backgroundColor: "transparent", border: "none"}} key={`${index}`} onClick={() => setSelectedProduct(item)}>
+                        <div>
+                          <img class="showcaseImage" src={item.img} alt="Sutradhar India Grass Utils" />
+                          <h5>{item.name}</h5>
+                        </div>
+                      </button>
                     )
                   })
                 }

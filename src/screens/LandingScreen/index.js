@@ -63,10 +63,10 @@ const LandingScreen = () => {
             reverse={true}
             id="landingSection"
             className="landingSectionContainerWrapper"
-            rightClassName="landingSectionLogo"
-            rightContent={() => <h1>Sutradhar India</h1>}
-            leftClassName="landingContent"
-            leftContent={() => (
+            leftClassName="landingSectionLogo"
+            leftContent={() => <h1>Sutradhar India</h1>}
+            rightClassName="landingContent"
+            rightContent={() => (
                     <div class="landingP">
                         <span class="landingDoer">
                             <img class="locationImg" src={MapLogo} alt="Location Icon" />
