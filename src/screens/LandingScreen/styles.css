@@ -249,7 +249,7 @@ nav {
     }
 
     .landingSectionContainerWrapper {    
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: 100vh;
     }
 

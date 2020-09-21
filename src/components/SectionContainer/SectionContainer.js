@@ -2,11 +2,9 @@ import React from 'react';
 
 import "./sectionContainer.css";
 
-const SectionContainer = ({id, reverse = false, leftContent = () => {}, rightContent = () => {}, children, className, leftClassName, rightClassName}) => {
+const SectionContainer = ({id, leftContent = () => {}, rightContent = () => {}, children, className, leftClassName, rightClassName}) => {
   return (
-    <div id={id} className={`sectionContainer ${className}`} style={{
-      flexDirection: reverse ? "row-reverse" : "row",
-    }}>
+    <div id={id} className={`sectionContainer ${className}`}>
       <div className={`sectionContainerContent ${leftClassName}`}>
         {leftContent()}
       </div>

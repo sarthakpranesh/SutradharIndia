@@ -106,8 +106,8 @@ const LandingScreen = () => {
                     <Button>Download Brochure</Button> 
                 </div>
             )}
-            rightClassName=""
-            rightContent={() => <img class="aboutImage" src={v1} alt="Sutradhar India" />}
+            rightClassName="sectionImage"
+            rightContent={() => <img src={v1} alt="Sutradhar India" />}
         >
         </SectionContainer>
 
