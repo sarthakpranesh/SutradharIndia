@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 
 // importing components
+import SectionContainer from '../../components/SectionContainer/SectionContainer.js';
 import DownArrow from '../../components/DownArrow/index.js';
 import Button from '../../components/Button/Button.js';
 // import FacebookIcon from '../../components/Svgs/facebook/index.js';
@@ -61,62 +62,76 @@ const LandingScreen = () => {
         </ul>
 
         {/* landing section */}
-        <div class="sectionContainer" id="landingSection">
-            <div class="sectionImage" id="landingLogo">
-                <h1>Sutradhar India</h1>
-            </div>
-            <div class="landingContent">
-                <div class="landingP">
-                    <span class="landingDoer">
-                        <img class="locationImg" src={MapLogo} alt="Location Icon" />
-                        <h4 className="landingSubHeading">Handicraft Centre of Rural &amp; Tribal Artisans</h4>
-                        <p>
-                        210 Rohini Complex,
-                            <br/>
-                        WA-121, Shakarpur, New Delhi-110092
-                        </p>
-                    </span>
-                </div>
-            </div>
+        <SectionContainer
+            reverse={true}
+            id="landingSection"
+            className="landingSectionContainerWrapper"
+            rightClassName="landingSectionLogo"
+            rightContent={() => <h1>Sutradhar India</h1>}
+            leftClassName="landingContent"
+            leftContent={() => (
+                    <div class="landingP">
+                        <span class="landingDoer">
+                            <img class="locationImg" src={MapLogo} alt="Location Icon" />
+                            <h4 className="landingSubHeading">Handicraft Centre of Rural &amp; Tribal Artisans</h4>
+                            <p>
+                            210 Rohini Complex,
+                                <br/>
+                            WA-121, Shakarpur, New Delhi-110092
+                            </p>
+                        </span>
+                    </div>
+                )
+            }
+        >
             <DownArrow navigateTo="#about" />
-        </div>
+        </SectionContainer>
 
         {/* about section */}
-        <div class="sectionContainer" id="about">
-            <div class="sectionContent">
-                <h3>Empowering Craftsmen and Changing Lives</h3>
-                <p>
-                Sutradhar India is a social enterprise to help rural and tribal artisans of India to preserve
-                their rich art &amp; craft, and provide them a sustainable livelihood. It is a collective effort of
-                artisans, designers and social activists to promote and revive the fast extinguishing art &amp;
-                craft of rural India. We also conduct training workshops for artisans from time to time to
-                improve their skills in new designs as per the new emerging market demands. The income
-                earned through this enterprise goes into improving the living standard and welfare of
-                artisans and their families.
-                </p>
-                <Button>Download Brochure</Button> 
-            </div>
-            <div class="sectionImage">
-                <img class="aboutImage" src={v1} alt="Sutradhar India" />
-            </div>
-        </div>
+        <SectionContainer
+            id="about"
+            leftClassName=""
+            leftContent={() => (
+                <div class="sectionContent">
+                    <h3>Empowering Craftsmen and Changing Lives</h3>
+                    <p>
+                    Sutradhar India is a social enterprise to help rural and tribal artisans of India to preserve
+                    their rich art &amp; craft, and provide them a sustainable livelihood. It is a collective effort of
+                    artisans, designers and social activists to promote and revive the fast extinguishing art &amp;
+                    craft of rural India. We also conduct training workshops for artisans from time to time to
+                    improve their skills in new designs as per the new emerging market demands. The income
+                    earned through this enterprise goes into improving the living standard and welfare of
+                    artisans and their families.
+                    </p>
+                    <Button>Download Brochure</Button> 
+                </div>
+            )}
+            rightClassName=""
+            rightContent={() => <img class="aboutImage" src={v1} alt="Sutradhar India" />}
+        >
+        </SectionContainer>
 
         {/* Our Products */}
-        <div class="sectionContainer" id="Products">
-            <div class="sectionImage">
-                <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />
-            </div>
-            <div class="sectionContent">
-                <h3>Our Products</h3>
-                <p>
-                We manufacture, supply and export handicraft made in natural grass, paper, fabric and
-                wood available in various intricate designs, unique patterns and beautiful colour
-                combinations. Our products include Dolls, Jewellery, handbags, wall hangings, coasters,
-                baskets, caps, furniture and other house decorating objects. All our products are nature
-                friendly and manufactured without using any hazardous chemicals.
-                </p>
-            </div>
-        </div>
+        <SectionContainer
+            id="Products"
+            leftClassName="sectionImage"
+            leftContent={() => <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />}
+            rightClassName=""
+            rightContent={() => (
+                <div class="sectionContent">
+                    <h3>Our Products</h3>
+                    <p>
+                    We manufacture, supply and export handicraft made in natural grass, paper, fabric and
+                    wood available in various intricate designs, unique patterns and beautiful colour
+                    combinations. Our products include Dolls, Jewellery, handbags, wall hangings, coasters,
+                    baskets, caps, furniture and other house decorating objects. All our products are nature
+                    friendly and manufactured without using any hazardous chemicals.
+                    </p>
+                    <Button href="/shop">Shop Now</Button> 
+                </div>
+            )}
+        >
+        </SectionContainer>
 
         {/* Ornaments */}
         <div class="showcaseContainer" id="Ornaments" >
@@ -166,35 +181,44 @@ const LandingScreen = () => {
         </div>
 
         {/* about us section */}
-        <div class="sectionContainer" id="Partners">
-            <div class="sectionImage">
-                <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />
-            </div>
-            <div class="sectionContent">
-                <h3>Our Partners</h3>
-                <p>
-                Our partners include retail and wholesale domestic &amp; foreign buyers, interior designers,
-                corporate houses and government agencies. We take upmost care of quality control and
-                timely delivery of consignments. We also get support from various national and
-                international agencies engaged in development and welfare activities.
-                </p>
-            </div>
-        </div>
+        <SectionContainer
+            id="Partners"
+            leftClassName="sectionImage"
+            leftContent={() => <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />}
+            rightClassName=""
+            rightContent={() => (
+                <div class="sectionContent">
+                    <h3>Our Partners</h3>
+                    <p>
+                    Our partners include retail and wholesale domestic &amp; foreign buyers, interior designers,
+                    corporate houses and government agencies. We take upmost care of quality control and
+                    timely delivery of consignments. We also get support from various national and
+                    international agencies engaged in development and welfare activities.
+                    </p>
+                </div>
+            )}
+        >
+        </SectionContainer>
 
-        <div class="sectionContainer" id="contactUs">
-            <div class="sectionContent">
-                <h3>Contact Us</h3>
-                <p>Director Ramesh Pranesh</p>
-                <p>Email: <a href="mailto:sutradharindiatrust@gmail.com">sutradharindiatrust@gmail.com</a></p>
-                <p>Mobile: <a href="tel:9810709170">9810709170</a></p>
-                {/* <div id="contactUsSocial">
-                    <a href=""><FacebookIcon /></a>
-                    <a><InstagramIcon /></a>
-                    <a><TwitterIcon /></a>
-                    <a><GithubIcon /></a>
-                </div> */}
-            </div>
-        </div>
+        <SectionContainer
+            id="contactUs"
+            leftClassName=""
+            leftContent={() => (
+                <div class="sectionContent">
+                    <h3>Contact Us</h3>
+                    <p>Director Ramesh Pranesh</p>
+                    <p>Email: <a href="mailto:sutradharindiatrust@gmail.com">sutradharindiatrust@gmail.com</a></p>
+                    <p>Mobile: <a href="tel:9810709170">9810709170</a></p>
+                    {/* <div id="contactUsSocial">
+                        <a href=""><FacebookIcon /></a>
+                        <a><InstagramIcon /></a>
+                        <a><TwitterIcon /></a>
+                        <a><GithubIcon /></a>
+                    </div> */}
+                </div>
+            )}
+        >
+        </SectionContainer>
         </>
     );
 }

@@ -4,12 +4,14 @@ import './App.css';
 
 // importing screens
 import LandingScreen from './screens/LandingScreen/index.js';
+import ShopScreen from './screens/ShopScreen/index.js';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={LandingScreen}></Route>
+        <Route exact path="/shop" component={ShopScreen}></Route>
       </Switch>
     </Router>
   );

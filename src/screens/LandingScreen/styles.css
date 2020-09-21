@@ -28,31 +28,6 @@ nav {
     margin-right: 3vw;
 }
 
-.sectionContainer {
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-
-    background-color: #f9f6f7;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    color: black;
-    padding: 4% 0px;
-}
-
-.sectionContent {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: justify;
-    padding: 10px 6%;
-}
-
 .sectionContent h3 {
     padding: 0px;
     font-family: 'DM Sans', sans-serif;
@@ -66,17 +41,9 @@ nav {
     font-family: 'DM Sans', sans-serif;
     margin: 0px;
     margin-top: 1%;
+    margin-bottom: 20px;
     font-size: 140%;
     font-weight: 600;
-}
-
-.sectionImage {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
 }
 
 .sectionImage img {
@@ -86,11 +53,11 @@ nav {
     width: 60%;
 }
 
-#landingSection {
+.landingSectionContainerWrapperContainerWrapper {
     background-color: #ffffff;
 }
 
-#landingLogo {
+.landingSectionLogo {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -98,7 +65,7 @@ nav {
     align-content: center;
 }
 
-#landingLogo h1 {
+.landingSectionLogo h1 {
     margin: auto;
     font-size: 64px;
     font-weight: bolder;
@@ -269,17 +236,6 @@ nav {
         color: white !important;
     }
 
-    .sectionContainer {
-        flex-direction: column-reverse;
-        height: auto;
-        padding-bottom: 40px;
-    }
-
-    .sectionContent {
-        width: 98vw;
-        height: max-content;
-    }
-
     .sectionContent h3 {
         font-size: 1.6rem;
     }
@@ -288,27 +244,21 @@ nav {
         font-size: 1.1rem;
     }
 
-    .sectionImage {
-        width: 100vw;
-        padding-top: 40px;
-        justify-content: center;
-    }
-
     .sectionImage img {
         width: 80%;
     }
 
-    #landingSection {    
+    .landingSectionContainerWrapper {    
         flex-direction: column;
         height: 100vh;
     }
 
-    #landingLogo {
+    .landingSectionLogo {
         width: 98vw;
         margin: auto;
     }
 
-    #landingLogo h1 {
+    .landingSectionLogo h1 {
         font-size: 2.8rem;
     }
 
