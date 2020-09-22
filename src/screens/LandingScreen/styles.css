@@ -53,7 +53,7 @@ nav {
     width: 60%;
 }
 
-.landingSectionContainerWrapperContainerWrapper {
+.landingSectionContainerWrapper {
     background-color: #ffffff;
 }
 
@@ -249,7 +249,6 @@ nav {
     }
 
     .landingSectionContainerWrapper {    
-        flex-direction: column-reverse;
         height: 100vh;
     }
 

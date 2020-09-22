@@ -99,18 +99,10 @@ const ShopScreen = () => {
           </div>
         </div>
       )}
+      rightClassName="topRollerImageWrapper"
       rightContent={() => <img src={require("../../assets/Handicraft/Seasonal Grass/grass-tray.jpg")} alt="Product" />}
     >
-      <button onClick={() => window.location.href = "/"} style={{
-        position: "absolute",
-        top: "20px",
-        left: "40px",
-        border: "none",
-        textAlign: "center",
-        padding: "0px",
-        backgroundColor: "transparent",
-        cursor: "pointer"
-      }}>
+      <button onClick={() => window.location.href = "/"} className="topSutradharHomeLink">
         <h5>Sutradhar India</h5>
       </button>
     </SectionContainer>
