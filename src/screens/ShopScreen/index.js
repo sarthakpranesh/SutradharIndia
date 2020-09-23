@@ -58,6 +58,9 @@ const ShopScreen = () => {
                 null
               }
               <br />
+              <p>
+                Cost: Rs. xxx /-
+              </p>
               <Button href={`http://${selectedProduct.link}`}>BUY NOW</Button>
             </div>
           </div>
@@ -88,7 +91,7 @@ const ShopScreen = () => {
         <div>
           <h1 className="topShopRollerFixedHeader">Shop With Us</h1>
           <div className="topShopRollerInnerDiv">
-            <h3 id="">Name of the Product</h3>
+            <h3 id="">Grass Tray Set</h3>
               <ol>
                 <li>Hand woven grass containers</li>
                 <li>Long lasting</li>

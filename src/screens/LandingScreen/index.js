@@ -100,7 +100,7 @@ const LandingScreen = () => {
                     earned through this enterprise goes into improving the living standard and welfare of
                     artisans and their families.
                     </p>
-                    <Button>Download Brochure</Button> 
+                    {/* <Button>Download Brochure</Button> */}
                 </div>
             )}
             rightClassName="sectionImage"
