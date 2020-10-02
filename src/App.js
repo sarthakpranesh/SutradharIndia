@@ -5,6 +5,7 @@ import './App.css';
 // importing screens
 import LandingScreen from './screens/LandingScreen/index.js';
 import ShopScreen from './screens/ShopScreen/index.js';
+import OrderScreen from './screens/OrderScreen/index.js';
 
 import {firebaseAuth} from './config/firebase.js';
 
@@ -12,23 +13,22 @@ const App = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    firebaseAuth.onAuthStateChanged(function(user) {
-      if (user) {
-        setUser(user)
-      }
-    });
-    if (user == null) {
-      firebaseAuth.signInAnonymously().catch((err) => {
-        console.log(err)
-      })
+    if (user === null) {
+        firebaseAuth.signInAnonymously()
+        .then((user) => setUser(user))
+        .catch((err) => {
+          console.log(err)
+        })
     }
-  }, [user])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={LandingScreen}></Route>
         <Route exact path="/shop" component={ShopScreen}></Route>
+        <Route path="/order/:id" component={OrderScreen}></Route>
       </Switch>
     </Router>
   );

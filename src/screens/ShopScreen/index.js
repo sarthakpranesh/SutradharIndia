@@ -61,7 +61,7 @@ const ShopScreen = () => {
               <p>
                 Cost: Rs. xxx /-
               </p>
-              <Button href={`http://${selectedProduct.link}`}>BUY NOW</Button>
+              <Button href={`/order/${selectedProduct.id}@@@${selectedProduct.index}`}>BUY NOW</Button>
             </div>
           </div>
         )}
@@ -122,7 +122,13 @@ const ShopScreen = () => {
                 {
                   type.items.map((item, index) => {
                     return (
-                      <button style={{backgroundColor: "transparent", border: "none"}} key={`${index}`} onClick={() => setSelectedProduct(item)}>
+                      <button style={{backgroundColor: "transparent", border: "none"}} key={`${index}`} onClick={() => {
+                        setSelectedProduct({
+                          ...item,
+                          id: type.id,
+                          index,
+                        })
+                      }}>
                         <div>
                           <img class="showcaseImage" src={item.img} alt="Sutradhar India Grass Utils" />
                           <h5>{item.name}</h5>
