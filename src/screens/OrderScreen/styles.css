@@ -9,7 +9,8 @@
 
 .orderScreenImage {
     width: 40vw;
-    height: auto;
+    height: 300px;
+    background-size: cover;
     align-self: center;
     border-radius: 8px;
 }

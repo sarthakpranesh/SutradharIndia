@@ -1,6 +1,23 @@
 import React from 'react';
 
-const Input = ({title, placeholder, type, setValue}) => {
+const Input = ({title, placeholder, type, setValue, radioArr, name}) => {
+    if (type === "radio") {
+        return (
+            <div style={{...styles.InputDivWrapper, flexDirection: 'row'}}>
+                <label style={styles.InputLabelStyle}>{title}</label>
+                {
+                    radioArr.map((val) => {
+                        return (
+                            <div style={{marginLeft: '20px'}}>
+                                <input onChange={(e) => setValue(e.target.value)} name={name} type="radio" style={styles.InputStyle} required value={val.value}/>
+                                <label style={{...styles.InputLabelStyle, fontSize: '18px'}}>{val.title}</label>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        );
+    }
     return (
         <div style={styles.InputDivWrapper}>
             <label style={styles.InputLabelStyle}>{title}</label>

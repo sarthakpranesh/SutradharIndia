@@ -3,9 +3,9 @@ import React from 'react';
 // importing styles
 import "./button.css";
 
-const Button = ({href = "#", target="", download=false, style, children}) => {
+const Button = ({href = "#", target="", download=false, style, children, onClick}) => {
 
-    return <a class="button" style={style} href={href} target={target} download={download}>{children}</a>;
+    return <a onClick={onClick} class="button" style={style} href={href} target={target} download={download}>{children}</a>;
 }
 
 export default Button;
