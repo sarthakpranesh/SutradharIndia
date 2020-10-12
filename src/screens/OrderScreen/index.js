@@ -4,6 +4,7 @@ import firebase from '../../config/firebase';
 import Skeleton from 'react-loading-skeleton';
 import 'firebase/firestore';
 import 'firebase/database';
+import {init, send} from "emailjs-com";
 
 import Button from '../../components/Button/Button.js';
 import Input from '../../components/Input/index.js';
@@ -22,12 +23,21 @@ const OrderScreen = () => {
     const [orderType, setOrderType] = useState('')
 
     useEffect(() => {
+        init("user_fP25bPIQzOd8SWvYhfMJf")
         firebase.firestore().collection('products').doc(type).get()
             .then((docSnap) => docSnap.data())
             .then((data) => data.items[index])
             .then((item) => setProduct(item))
             .catch((err) => console.log(err))
     }, [index, type])
+
+    const sendConfirmation = (emailVars) => {
+        send('service_3b8tn3z', "template_m5gdu2r", emailVars)
+        .then(res => {
+          console.log('Email successfully sent!')
+        })
+        .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+    }
 
     const placeOrder = () => {
         if (email === "") {
@@ -49,6 +59,9 @@ const OrderScreen = () => {
         firebase.database().ref("orders").child(uid).set({uid, email, mobile, address, id, orderTime: Date.now(), orderType, payment: false})
             .then((r) => {
                 if (orderType === "cod") {
+                    const emailVars =  {productName: product.name, toEmail: email, oid: uid}
+                    console.log(emailVars)
+                    sendConfirmation(emailVars)
                     alert("Order placed, you'll soon receive a confirmation mail!")
                 } else if (orderType === "op") {
                     console.log("Send to payment gateway")
