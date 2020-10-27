@@ -4,8 +4,6 @@ import './App.css';
 
 // importing screens
 import LandingScreen from './screens/LandingScreen/index.js';
-import ShopScreen from './screens/ShopScreen/index.js';
-import OrderScreen from './screens/OrderScreen/index.js';
 
 import {firebaseAuth} from './config/firebase.js';
 
@@ -27,8 +25,6 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={LandingScreen}></Route>
-        <Route exact path="/shop" component={ShopScreen}></Route>
-        <Route path="/order/:id" component={OrderScreen}></Route>
       </Switch>
     </Router>
   );
