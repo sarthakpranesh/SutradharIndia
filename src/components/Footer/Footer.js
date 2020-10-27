@@ -11,7 +11,7 @@ const Footer = () => {
             id="contactUs"
             leftClassName=""
             leftContent={() => (
-            <div class="FooterWrapper">
+            <div className="FooterWrapper">
                 <h3>Contact Us</h3>
                 <p>Director Ramesh Pranesh</p>
                 <p>Email: <a href="mailto:sutradharindiatrust@gmail.com">sutradharindiatrust@gmail.com</a></p>

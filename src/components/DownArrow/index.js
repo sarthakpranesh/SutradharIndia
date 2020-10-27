@@ -18,7 +18,7 @@ const DownArrow = ({navigateTo = null, style = {},}) => {
             });
         }
     })
-    return <img class="downArrow" style={style} src={arrowImage} alt="Down Arrow" />;
+    return <img className="downArrow" style={style} src={arrowImage} alt="Down Arrow" />;
 }
 
 export default DownArrow;

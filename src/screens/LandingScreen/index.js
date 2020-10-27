@@ -31,31 +31,31 @@ const LandingScreen = () => {
     return (
         <>
         {/* Navbar section */}
-        <nav class="changeColorOnScroll">
-            <div class="nav-wrapper">
-                <a href="#landingSection" class="brand-logo" id="brandLogo">
+        <nav className="changeColorOnScroll">
+            <div className="nav-wrapper">
+                <a href="#landingSection" className="brand-logo" id="brandLogo">
                     Sutradhar India
                 </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style={{color: "#ff971d"}}>menu</i></a>
-                <ul class="right hide-on-med-and-down correctRight">
-                    <li><a href="#about" class="navItem">Our Goal</a></li>
-                    <li><a href="#Products" class="navItem">Products</a></li>
-                    <li><a href="#Ornaments" class="navItem">Ornaments</a></li>
-                    <li><a href="#Containers" class="navItem">Containers</a></li>
-                    <li><a href="#Furniture" class="navItem">Furniture</a></li>
-                    <li><a href="#Partners" class="navItem">Partners</a></li>
-                    <li><a href="#contactUs" class="navItem">Contact Us</a></li>
+                <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons" style={{color: "#ff971d"}}>menu</i></a>
+                <ul className="right hide-on-med-and-down correctRight">
+                    <li><a href="#about" className="navItem">Our Goal</a></li>
+                    <li><a href="#Products" className="navItem">Products</a></li>
+                    <li><a href="#Ornaments" className="navItem">Ornaments</a></li>
+                    <li><a href="#Containers" className="navItem">Containers</a></li>
+                    <li><a href="#Furniture" className="navItem">Furniture</a></li>
+                    <li><a href="#Partners" className="navItem">Partners</a></li>
+                    <li><a href="#contactUs" className="navItem">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="#about" class="sidenav-close navItem">Our Work</a></li>
-            <li><a href="#Products" class="sidenav-close navItem">Products</a></li>
-            <li><a href="#Ornaments" class="sidenav-close navItem">Ornaments</a></li>
-            <li><a href="#Containers" class="sidenav-close navItem">Containers</a></li>
-            <li><a href="#Furniture" class="sidenav-close navItem">Furniture</a></li>
-            <li><a href="#Partners" class="sidenav-close navItem">Partners</a></li>
-            <li><a href="#contactUs" class="sidenav-close navItem">Contact Us</a></li>
+        <ul className="sidenav" id="mobile-demo">
+            <li><a href="#about" className="sidenav-close navItem">Our Work</a></li>
+            <li><a href="#Products" className="sidenav-close navItem">Products</a></li>
+            <li><a href="#Ornaments" className="sidenav-close navItem">Ornaments</a></li>
+            <li><a href="#Containers" className="sidenav-close navItem">Containers</a></li>
+            <li><a href="#Furniture" className="sidenav-close navItem">Furniture</a></li>
+            <li><a href="#Partners" className="sidenav-close navItem">Partners</a></li>
+            <li><a href="#contactUs" className="sidenav-close navItem">Contact Us</a></li>
         </ul>
 
         {/* landing section */}
@@ -67,9 +67,9 @@ const LandingScreen = () => {
             leftContent={() => <h1>Sutradhar India</h1>}
             rightClassName="landingContent"
             rightContent={() => (
-                    <div class="landingP">
-                        <span class="landingDoer">
-                            <img class="locationImg" src={MapLogo} alt="Location Icon" />
+                    <div className="landingP">
+                        <span className="landingDoer">
+                            <img className="locationImg" src={MapLogo} alt="Location Icon" />
                             <h4 className="landingSubHeading">Handicraft Centre of Rural &amp; Tribal Artisans</h4>
                             <p>
                             210 Rohini Complex,
@@ -89,7 +89,7 @@ const LandingScreen = () => {
             id="about"
             leftClassName=""
             leftContent={() => (
-                <div class="sectionContent">
+                <div className="sectionContent">
                     <h3>Empowering Craftsmen and Changing Lives</h3>
                     <p>
                     Sutradhar India is a social enterprise to help rural and tribal artisans of India to preserve
@@ -115,7 +115,7 @@ const LandingScreen = () => {
             leftContent={() => <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />}
             rightClassName=""
             rightContent={() => (
-                <div class="sectionContent">
+                <div className="sectionContent">
                     <h3>Our Products</h3>
                     <p>
                     We manufacture, supply and export handicraft made in natural grass, paper, fabric and
@@ -131,49 +131,49 @@ const LandingScreen = () => {
         </SectionContainer>
 
         {/* Ornaments */}
-        <div class="showcaseContainer" id="Ornaments" >
-            <div class="showcaseTitle">
+        <div className="showcaseContainer" id="Ornaments" >
+            <div className="showcaseTitle">
                 <h3>Only Some Ornaments</h3>
             </div>
-            <div class="showcaseBox">
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0076.jpg')} alt="Sutradhar India Ornaments" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0077.jpg')} alt="Sutradhar India Ornaments" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0079.jpg')} alt="Sutradhar India Ornaments" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0094.jpg')} alt="Sutradhar India Ornaments" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0135.jpg')} alt="Sutradhar India Ornaments" />
+            <div className="showcaseBox">
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0076.jpg')} alt="Sutradhar India Ornaments" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0077.jpg')} alt="Sutradhar India Ornaments" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0079.jpg')} alt="Sutradhar India Ornaments" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0094.jpg')} alt="Sutradhar India Ornaments" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0135.jpg')} alt="Sutradhar India Ornaments" />
             </div>
-            <div class="showcaseBox" >
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0180.jpg')} alt="Sutradhar India Ornaments" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0182.jpg')} alt="Sutradhar India Ornaments" />
+            <div className="showcaseBox" >
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0180.jpg')} alt="Sutradhar India Ornaments" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Ornaments/IMG-20200214-WA0182.jpg')} alt="Sutradhar India Ornaments" />
             </div>
         </div>
 
         {/* Past Collaboration */}
-        <div class="showcaseContainer" id="Containers" >
-            <div class="showcaseTitle">
+        <div className="showcaseContainer" id="Containers" >
+            <div className="showcaseTitle">
                 <h3>Few Grass Containers</h3>
             </div>
-            <div class="showcaseBox">
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/grass-basket.jpg')} alt="Sutradhar India Grass Utils" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/grass-plate-yellow-color.jpg')} alt="Sutradhar India Grass Utils" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/grass-tray.jpg')} alt="Sutradhar India Grass Utils" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/IMG_0077.jpg')} alt="Sutradhar India Grass Utils" />
+            <div className="showcaseBox">
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/grass-basket.jpg')} alt="Sutradhar India Grass Utils" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/grass-plate-yellow-color.jpg')} alt="Sutradhar India Grass Utils" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/grass-tray.jpg')} alt="Sutradhar India Grass Utils" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/IMG_0077.jpg')} alt="Sutradhar India Grass Utils" />
             </div>
-            <div class="showcaseBox">
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/PAGE16-1024x847.jpg')} alt="Sutradhar India Grass Utils" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/PAGE8-1024x847.jpg')} alt="Sutradhar India Grass Utils" />
+            <div className="showcaseBox">
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/PAGE16-1024x847.jpg')} alt="Sutradhar India Grass Utils" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Seasonal Grass/PAGE8-1024x847.jpg')} alt="Sutradhar India Grass Utils" />
             </div>
         </div>
 
         {/* Past Collaboration */}
-        <div class="showcaseContainer" id="Furniture" >
-            <div class="showcaseTitle">
+        <div className="showcaseContainer" id="Furniture" >
+            <div className="showcaseTitle">
                 <h3>Yes! Even Furniture</h3>
             </div>
-            <div class="showcaseBox">
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Furniture/IMG-20191118-WA0014.jpg')} alt="Sutradhar India Furniture" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Furniture/IMG-20191118-WA0015.jpg')} alt="Sutradhar India Furniture" />
-                <img class="showcaseImage" src={require('../../assets/Handicraft/Furniture/IMG-20191118-WA0025.jpg')} alt="Sutradhar India Furniture" />
+            <div className="showcaseBox">
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Furniture/IMG-20191118-WA0014.jpg')} alt="Sutradhar India Furniture" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Furniture/IMG-20191118-WA0015.jpg')} alt="Sutradhar India Furniture" />
+                <img className="showcaseImage" src={require('../../assets/Handicraft/Furniture/IMG-20191118-WA0025.jpg')} alt="Sutradhar India Furniture" />
             </div>
         </div>
 
@@ -184,7 +184,7 @@ const LandingScreen = () => {
             leftContent={() => <img src={require('../../assets/v2.jpg')} alt="Sutradhar India" />}
             rightClassName=""
             rightContent={() => (
-                <div class="sectionContent">
+                <div className="sectionContent">
                     <h3>Our Partners</h3>
                     <p>
                     Our partners include retail and wholesale domestic &amp; foreign buyers, interior designers,
