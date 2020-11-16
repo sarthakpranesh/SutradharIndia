@@ -1,4 +1,11 @@
-.FooterWrapper h3 {
+.FooterSectionWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.FooterWrapperLeft h3 {
     padding: 0px;
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
@@ -7,21 +14,55 @@
     text-align: left;
 }
 
-.FooterWrapper p {
+.FooterWrapperLeftMap {
+    height: 300px;
+    border-radius: 8px;
+}
+
+.FooterWrapperRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 300px;
+}
+
+.FooterWrapperRight p {
     font-family: 'DM Sans', sans-serif;
     margin: 0px;
     margin-top: 1%;
-    margin-bottom: 20px;
-    font-size: 140%;
+    margin-bottom: 0px;
+    font-size: 100%;
     font-weight: 600;
 }
 
+.FooterWrapperRightSocial {
+    margin-top: 20px;
+}
+
+.FooterWrapperRightSocial a {
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 600px) {
-    .FooterWrapper h3 {
+    .FooterSectionWrapper {
+        flex-direction: column;
+    }
+
+    .FooterWrapperLeftMap {
+        width: 100%;
+    }
+
+    .FooterWrapperLeft h3 {
         font-size: 1.6rem;
     }
 
-    .FooterWrapper p {
+    .FooterWrapperRight {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .FooterWrapperRight p {
         font-size: 1.1rem;
     }
 }
